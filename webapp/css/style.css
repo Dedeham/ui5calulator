@@ -1,0 +1,99 @@
+div.sapUiTableRowHdr::before, div.sapUiTableColRowHdrIco::before {
+  border-radius: 20px;
+  border: 0.125rem lightgrey solid;
+  width: 1.2rem;
+  height: 1.2rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.sapMBtnInner {
+  border: none;
+  background: lightgrey;
+}
+
+.sapMBtn:hover > .sapMBtnHoverable {
+  background: #66e3ff;
+}
+
+.sapMBtnActive {
+  background: #00d0ff;
+}
+
+table.sapUiTableCtrl tr.sapUiTableRowHvr, tr.sapUiTableTr.sapUiTableRowHvr > td:not(.sapUiTableTDDummy) {
+  background: #e6faff;
+}
+
+tr.sapUiTableTr.sapUiTableRowHvr.sapUiTableRowSel:not(.sapUiTableGroupHeader) > td:not(.sapUiTableTDDummy), div.sapUiTableRowHdr.sapUiTableRowSel.sapUiTableRowHvr {
+  background: #ccf6ff;
+}
+
+tr.sapUiTableTr.sapUiTableRowAlternate, div.sapUiTableRowHdr.sapUiTableRowAlternate {
+  background:  black;
+}
+
+td.sapUiTableCol, div.sapUiTableColRowHdr {
+  background: black;
+}
+
+tr.sapUiTableTr > td {
+  border-bottom: palevioletred;
+}
+
+td.sapUiTableCol:hover {
+  background: black !important;
+}
+
+div.sapUiTableColRowHdr, div.sapUiTableRowHdr {
+  border: black;
+}
+
+div.sapUiTableRowHdr {
+  background: #FFF;
+}
+
+div.sapUiTableColRowHdr:hover, div.sapUiTableRowHdr:hover {
+  background: #ccf6ff;
+}
+
+div.sapUiTableRowHdr.sapUiTableRowHvr::before, div.sapUiTableColRowHdrIco:hover::before {
+  border-color: black;
+}
+
+tr.sapUiTableTr.sapUiTableRowSel:not(.sapUiTableGroupHeader) > td:not(.sapUiTableTDDummy), div.sapUiTableRowHdr.sapUiTableRowSel, div.sapUiTableRowHdr.sapUiTableRowHvr {
+  background: black;
+}
+
+div.sapMGT {
+  background: #ccf6ff;
+}
+
+.sapUiGlobalBackgroundColor, .sapMShellGlobalInnerBackground {
+  background: #FFF;
+}
+
+.sapMShellGlobalOuterBackground {
+  background: #99ecff;
+}
+
+.sapMShellBrandingBar {
+  background: none;
+}
+
+.sapMIBar {
+  background: #e6faff;
+}
+
+div.sapMListBGSolid .sapMLIB:not(.sapMLIBActive):not(.sapMLIBSelected):not(:hover) {
+  background: #ccf6ff;
+}
+
+li.sapMNLI:hover {
+  background: #99ecff;
+}
+
+.borderpanel{
+  border: 2px solid black
+}
+
+/*# sourceMappingURL=style.css.map */

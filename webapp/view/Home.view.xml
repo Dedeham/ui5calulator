@@ -1,0 +1,104 @@
+<core:View
+	controllerName="root.controller.home"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	xmlns:ext="root.controls"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="{i18n>Basic Calculator made by Kaya D.}">
+				<content>
+
+					<VBox alignItems="Center">
+						<Panel
+								headerText="{i18n>CASIO CC 69 SX }"
+								class="sapUiResponsiveMargin borderpanel"
+								backroundDesign="solid"
+								>
+							<VBox alignItems="Center">
+								<HBox alignItems="Center">
+									<Input value="{inputModel>/expression/}" width="100%"></Input>
+								</HBox>
+								<HBox alignContent="SpaceBetween">
+									<VBox>
+										<Button text="7" press="editInput(7)"></Button>
+									</VBox>
+									<VBox>
+										<Button text="8" press="editInput(8)"></Button>
+									</VBox>
+									<VBox>
+										<Button text="9" press="editInput(9)"></Button>
+									</VBox>
+									<VBox>
+										<Button text="/" press="editInput('/')"></Button>
+									</VBox>
+									<VBox>
+										<Button text="√" press="editInput('√')"></Button>
+									</VBox>
+								</HBox>
+								<HBox>
+									<VBox>
+										<Button text="4" press="editInput(4)"></Button>
+									</VBox>
+									<VBox>
+										<Button text="5" press="editInput(5)"></Button>
+									</VBox>
+									<VBox>
+										<Button text="6" press="editInput(6)"></Button>
+									</VBox>
+									<VBox>
+										<Button text="X" press="editInput('*')"></Button>
+									</VBox>
+									<VBox>
+										<Button text="exp." press="editInput('**')"></Button>
+									</VBox>
+								</HBox>
+								<HBox>
+									<VBox>
+										<Button text="1" press="editInput(1)"></Button>
+									</VBox>
+									<VBox>
+										<Button text="2" press="editInput(2)"></Button>
+									</VBox>
+									<VBox>
+										<Button text="3" press="editInput(3)"></Button>
+									</VBox>
+									<VBox>
+										<Button text="-" press="editInput('-')"></Button>
+									</VBox>
+									<VBox>
+										<Button text="sin()" press="editInput('sin(')"></Button>
+									</VBox>
+								</HBox>
+								<HBox>
+									<VBox>
+										<Button text="." press="editInput('.')"></Button>
+									</VBox>
+									<VBox>
+										<Button text="0" press="editInput(0)"></Button>
+									</VBox>
+									<VBox>
+										<Button text="=" press="validCompute"></Button>
+									</VBox>
+									<VBox>
+										<Button text="+" press="editInput('+')"></Button>
+									</VBox>
+									<VBox>
+										<Button text="cos()" press="editInput('cos(')"></Button>
+									</VBox>
+								</HBox>
+								<HBox>
+									<VBox>
+										<Button text = "(" press="editInput('(')"></Button>
+									</VBox>
+									<VBox>
+										<Button text = "Clear" press="clearInput"></Button>
+									</VBox>
+									<VBox>
+										<Button text = ")" press="editInput(')')"></Button>
+									</VBox>
+								</HBox>
+							</VBox>
+						</Panel>
+					</VBox>
+				</content>
+			</Page>
+</core:View>

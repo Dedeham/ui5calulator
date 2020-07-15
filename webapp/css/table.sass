@@ -1,0 +1,47 @@
+// Hover on Row & Control & Row Header (Checkbox)
+table.sapUiTableCtrl tr.sapUiTableRowHvr, tr.sapUiTableTr.sapUiTableRowHvr>td:not(.sapUiTableTDDummy)
+	background: $highlight5-color
+
+// Color on Hover over selected Row
+tr.sapUiTableTr.sapUiTableRowHvr.sapUiTableRowSel:not(.sapUiTableGroupHeader)>td:not(.sapUiTableTDDummy), div.sapUiTableRowHdr.sapUiTableRowSel.sapUiTableRowHvr
+	background: $highlight4-color
+
+// Alternating Row colors of Row and RowHeader (Check Box)
+tr.sapUiTableTr.sapUiTableRowAlternate, div.sapUiTableRowHdr.sapUiTableRowAlternate
+	background: $highlight4-color
+
+// Column Header & Row Header color
+td.sapUiTableCol, div.sapUiTableColRowHdr
+	background: $highlight3-color
+
+// Bottom-Border of Rows
+tr.sapUiTableTr>td
+	border-bottom: none
+
+// Hover on Column Header
+td.sapUiTableCol:hover
+	background: $highlight4-color !important
+
+// Border of Table Column Check Box and Row Header Check Box
+div.sapUiTableColRowHdr, div.sapUiTableRowHdr
+	border: none
+
+// Column Row Header color
+div.sapUiTableRowHdr
+	background: $primary-color
+
+// Hover on Column Row Header
+div.sapUiTableColRowHdr:hover, div.sapUiTableRowHdr:hover
+	background: $highlight4-color
+
+// Row Header Check Box style
+div.sapUiTableRowHdr::before, div.sapUiTableColRowHdrIco::before
+	@extend %check-box
+
+// hover over row header
+div.sapUiTableRowHdr.sapUiTableRowHvr::before, div.sapUiTableColRowHdrIco:hover::before
+	border-color: $highlight0-color
+
+// Color on Row Select (CheckBox & Row)
+tr.sapUiTableTr.sapUiTableRowSel:not(.sapUiTableGroupHeader)>td:not(.sapUiTableTDDummy), div.sapUiTableRowHdr.sapUiTableRowSel, div.sapUiTableRowHdr.sapUiTableRowHvr
+	background: $highlight5-color

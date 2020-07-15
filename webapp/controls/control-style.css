@@ -1,0 +1,62 @@
+.sliderTickMark {
+	position: absolute;
+	top: 0;
+	height: 1em;
+}
+
+.sliderTickMark-inner {
+	width: 2px;
+	margin: 0 -1px;
+	height: 100%;
+	background-color: rgb(221, 221, 221);
+}
+
+.sliderTickMark-label {
+	user-select: none;
+	color: #777;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+
+.sapMSliderHandle {
+	z-index: 2;
+}
+
+.sapMSliderProgress {
+	z-index: 1;
+}
+
+.sapMSliderTooltipContainer {
+    display: flex;
+    position: absolute;
+    top: -2rem;
+    height: 1.5rem;
+    width: auto;
+    justify-content: space-between;
+    transition-property: left, right;
+}
+
+.sapMSliderLabels {
+    position: relative;
+    top: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.sapMSliderHandleTooltip {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+    background: #ffffff;
+    color: #000000;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 0.75rem;
+    text-align: center;
+    box-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.5);
+    position: relative;
+    flex-shrink: 0;
+}

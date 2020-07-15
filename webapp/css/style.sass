@@ -1,0 +1,25 @@
+@import "colors"
+@import "mixins"
+
+@import "button"
+@import "table"
+@import "tile"
+
+// style
+.sapUiGlobalBackgroundColor, .sapMShellGlobalInnerBackground
+	background: $primary-color
+
+.sapMShellGlobalOuterBackground
+	background: $highlight3-color
+
+.sapMShellBrandingBar
+	background: none
+
+.sapMIBar
+	background: $highlight5-color
+
+div.sapMListBGSolid .sapMLIB:not(.sapMLIBActive):not(.sapMLIBSelected):not(:hover)
+	background: $highlight4-color
+
+li.sapMNLI:hover
+	background: $highlight3-color

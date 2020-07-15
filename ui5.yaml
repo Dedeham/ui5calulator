@@ -1,0 +1,4 @@
+specVersion: '2.1'
+metadata:
+  name: ui5-calculator
+type: application

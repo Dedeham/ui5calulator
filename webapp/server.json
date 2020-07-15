@@ -1,0 +1,11 @@
+{
+	"config": {
+		"regex": true
+	},
+	"resources":  [
+		{
+			"path": "C:/Users/kdedeoglu/Documents/SAPUI5/sapui5-sdk-1.79.1/resources",
+			"mount": "/resources"
+		}
+	]	
+}

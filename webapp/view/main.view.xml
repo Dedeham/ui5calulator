@@ -1,0 +1,7 @@
+<mvc:View
+    controllerName="root.controller.main"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true">
+    <App id="mainView"/>
+</mvc:View>
