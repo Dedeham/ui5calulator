@@ -68,11 +68,11 @@ sap.ui.define([
 });
 var isValid = function (expList) {
 	for (var i = 1; i < expList.length; ++i) {
-		if (("+-/*".indexOf(expList[i - 1]) !== -1) && ("+-/*".indexOf(expList[i]) !== -1))
+		if (("+-/*^".indexOf(expList[i - 1]) !== -1) && ("+-/*^".indexOf(expList[i]) !== -1))
 			return false;
 	}
 	console.log(expList[expList.length - 1]);
-	return ("+-/*".indexOf(expList[expList.length - 1]) === -1);
+	return ("+-/*^".indexOf(expList[expList.length - 1]) === -1);
 }
 var changeToPostfix = function (expression) {
 
@@ -82,12 +82,14 @@ var changeToPostfix = function (expression) {
 		"+": 1,
 		"-": 1,
 		"/": 2,
-		"*": 2
+		"*": 2,
+		"": 2,
+		"^": 3
 	}
 
 	expression.forEach(element => {
 
-		if ("+-/*".indexOf(element) == -1) {
+		if ("+-/*^".indexOf(element) == -1) {
 			postFix.push(element);
 		} else {
 
@@ -108,7 +110,7 @@ var evaluatePostFix = function (postFix) {
 
 	var stack = Array();
 	postFix.forEach(elements => {
-		if ("+-/*".indexOf(elements) == -1) {
+		if ("+-/*^".indexOf(elements) == -1) {
 			stack.push(parseFloat(elements));
 		} else {
 			if (stack.length < 2)
@@ -131,6 +133,8 @@ var performOperation = function (a, b, operator) {
 			return parseFloat(a) / parseFloat(b);
 		case "+":
 			return parseFloat(a) + parseFloat(b);
+		case "^":
+			return Math.pow(parseFloat(a), parseFloat(b));
 		default:
 			alert("Math Fehler");
 			return null;

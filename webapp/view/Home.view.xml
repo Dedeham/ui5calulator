@@ -31,7 +31,7 @@
 										<Button text="/" press="editInput('/')"></Button>
 									</VBox>
 									<VBox>
-										<Button text="√" press="editInput('√')"></Button>
+										<Button text="√" press="editInput('')"></Button>
 									</VBox>
 								</HBox>
 								<HBox>
@@ -48,7 +48,7 @@
 										<Button text="X" press="editInput('*')"></Button>
 									</VBox>
 									<VBox>
-										<Button text="exp." press="editInput('**')"></Button>
+										<Button text="exp." press="editInput('^')"></Button>
 									</VBox>
 								</HBox>
 								<HBox>

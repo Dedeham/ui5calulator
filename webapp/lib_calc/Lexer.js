@@ -32,7 +32,7 @@ sap.ui.define([
             };
             lexer.parseOperator = function () {
                 var currentChar = this.getChar()
-                if ("+-/*".includes(currentChar)) {
+                if ("+-/*^".includes(currentChar)) {
                     this.index++;
                     return currentChar
                 } else {
