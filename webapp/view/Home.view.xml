@@ -31,7 +31,7 @@
 										<Button text="/" press="editInput('/')"></Button>
 									</VBox>
 									<VBox>
-										<Button text="√" press="editInput('')"></Button>
+										<Button text="√" press="editInput('√(')"></Button>
 									</VBox>
 								</HBox>
 								<HBox>
@@ -90,10 +90,16 @@
 										<Button text = "(" press="editInput('(')"></Button>
 									</VBox>
 									<VBox>
-										<Button text = "Clear" press="clearInput"></Button>
+										<Button text = ")" press="editInput(')')"></Button>
 									</VBox>
 									<VBox>
-										<Button text = ")" press="editInput(')')"></Button>
+										<Button text = "AC" press="clearInput"></Button>
+									</VBox>
+									<VBox>
+										<Button text = "DEL" press="removeChar"></Button>
+									</VBox>
+									<VBox>
+										<Button text = "tan()" press="editInput('tan(')"></Button>
 									</VBox>
 								</HBox>
 							</VBox>

@@ -17,7 +17,20 @@ sap.ui.define([
 			if (typeof list == "object") {
 				for (let e = 0; e < list.length; e++) {
 					if (typeof list[e] == "object") {
-						list[e]  = this.calc(list[e]);
+						var i = this.calc(list[e]);
+						switch (list[e - 1]) {
+							case "sin":
+								i = Math.sin(i);
+								break;
+							case "cos":
+								i = Math.cos(i);
+								break;
+							case "tan":
+								i = Math.tan(i);
+							case "sqrt":
+								i = Math.sqrt(i)
+						}
+						list[e] = i;
 					}
 				}
 				var postFix = changeToPostfix(list);
@@ -31,6 +44,17 @@ sap.ui.define([
 		//spalte komplett ausleeren
 		clearInput: function () {
 			this.getView().getModel("inputModel").setProperty("/expression", ""); //setzte textfeld auf ""
+		},
+		removeChar: function () {
+			var change = this.getView().getModel("inputModel").getProperty("/expression");
+			if (change == "") {
+				sap.m.MessageToast.show("Du kannst nicht nichts löschen!");
+			}
+			else {
+				var length = this.getView().getModel("inputModel").getProperty("/expression").length;
+				var result = this.getView().getModel("inputModel").getProperty("/expression").slice(0, length - 1);
+				this.getView().getModel("inputModel").setProperty("/expression", result);
+			}
 		},
 		//in spalte einfügen
 		editInput: function (ch) {
@@ -49,6 +73,7 @@ sap.ui.define([
 
 				var lexer = Lexer();
 				var expList = lexer.parse(expression);
+				console.log(expList);
 			}
 			catch (parseerror) {
 				sap.m.MessageToast.show(parseerror.message)
@@ -83,7 +108,7 @@ var changeToPostfix = function (expression) {
 		"-": 1,
 		"/": 2,
 		"*": 2,
-		"": 2,
+		"sin(": 2,
 		"^": 3
 	}
 
