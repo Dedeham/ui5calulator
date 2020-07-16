@@ -27,7 +27,7 @@ Follow the steps
 
 **leave the rest as is!**
 
-> 3. You can now open the files and look at the code, you can also create a localhost by pressing alt+L and alt+O, or just by clicking on the view-tab --> command palette and then searching for live server
+> 3. You can now open the files and look at the code, you can also create a localhost by pressing alt+L and alt+O, or just by clicking on the view-tab --> command palette and then searching for live server and executing it.
 
 # Change log 
 
