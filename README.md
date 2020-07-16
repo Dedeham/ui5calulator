@@ -25,4 +25,17 @@ Follow the steps
         ["/resources", "C:/Users/%username%/Documents/SAPUI5/sapui5-sdk-1.79.1/resources"]
     ],
 
-> leave the rest as is!
+**leave the rest as is!**
+
+> 3. You can now open the files and look at the code, you can also create a localhost by pressing alt+L and alt+O, or just by clicking on the view-tab --> command palette and then searching for live server
+
+# Change log 
+
+Overall:
+- Plenty visual updates
+- Fixed issue with button press
+- Fixed issue with a space in editor-canvas
+- Fixed issue with parenthesis
+- Added exp. in recent update
+
+# Ight bois imma dip peace ouut!
