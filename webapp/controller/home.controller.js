@@ -85,7 +85,7 @@ sap.ui.define([
 					return;
 				}
 			}
-			alert("Kein Vollständiger ausdruck!");
+			sap.m.MessageToast.show("Kein Vollständiger ausdruck!");
 
 		}
 

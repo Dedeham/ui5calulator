@@ -27,7 +27,7 @@ Follow the steps
 
 **leave the rest as is!**
 
-> 3. You can now open the files and look at the code, you can also create a localhost by pressing alt+L and alt+O, or just by clicking on the view-tab --> command palette and then searching for live server and executing it.
+> 3. You can now download the calculator by clicking on the code button and downloading it as a zip, this is the point where you can look at the code, you can also create a localhost by pressing alt+L and alt+O, or just by clicking on the view-tab --> command palette and then searching for live server and executing it.
 
 # Change log 
 
@@ -36,6 +36,8 @@ Overall:
 - Fixed issue with button press
 - Fixed issue with a space in editor-canvas
 - Fixed issue with parenthesis
-- Added exp. in recent update
+- Added expo and sqrt
+- Added the trig functions: sin, cos and tan
+- Added DEL button
 
 # Ight bois imma dip peace ouut!
