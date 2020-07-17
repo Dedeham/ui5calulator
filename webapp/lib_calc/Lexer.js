@@ -5,6 +5,7 @@ sap.ui.define([
     var Lexer = Object.extend("xyz", {
         constructor() {
             var lexer = {};
+            lexer.operatorAllowed = false;
             lexer.index = 0;
             lexer.text = "";
             lexer.parse = function (text) {
@@ -16,31 +17,39 @@ sap.ui.define([
                     }
                     var parseOp = this.parseOperator();
                     if (parseOp) {
+                        this.operatorAllowed = false;
                         tokens.push(parseOp);
                         continue;
                     }
                     var brackets = this.parseBrackets();
                     if (brackets) {
                         tokens.push(brackets);
+                        this.operatorAllowed = true;
                         continue;
                     }
                     var parsetrig = this.parseTrig();
                     if (parsetrig){
                         tokens = tokens.concat(parsetrig)
+                        this.operatorAllowed = true;
                         continue;
                     }
                     var parsesqrt = this.parseSqrtout();
                     if(parsesqrt){
                         tokens = tokens.concat(parsesqrt)
+                        this.operatorAllowed = true;
                         continue;
                     }
                     else {
                         tokens.push(this.parseNumber())
+                        this.operatorAllowed = true;
                     }
                 }
                 return tokens;
             };
             lexer.parseOperator = function () {
+                if(this.operatorAllowed == false){
+                    return null;
+                }
                 var currentChar = this.getChar()
                 if ("+-/*^".includes(currentChar)) {
                     this.index++;
@@ -83,7 +92,7 @@ sap.ui.define([
                         throw new Error("Da hast du wohl etwas falsch gemacht :)");
                     }
                 }
-
+                vltsinnvoll = prefix * vltsinnvoll;
                 return commaindex >= 0 ? vltsinnvoll / (10 ** commaindex) : vltsinnvoll;
             };
             lexer.parseBrackets = function () {

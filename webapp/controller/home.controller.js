@@ -78,7 +78,7 @@ sap.ui.define([
 			if (isValid(expList) && expList.length) {
 				var result = this.calc(expList);
 				if (result != null) {
-					this.getView().getModel("inputModel").setProperty("/expression", result);
+					this.getView().getModel("inputModel").setProperty("/expression", result.toString());
 					return;
 				}
 			}
