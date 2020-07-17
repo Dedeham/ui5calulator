@@ -41,9 +41,8 @@ sap.ui.define([
 				alert("da gibt es wohl ein kleines problem, es wurde keine liste eingegeben.")
 			}
 		},
-		//spalte komplett ausleeren
 		clearInput: function () {
-			this.getView().getModel("inputModel").setProperty("/expression", ""); //setzte textfeld auf ""
+			this.getView().getModel("inputModel").setProperty("/expression", "");
 		},
 		removeChar: function () {
 			var change = this.getView().getModel("inputModel").getProperty("/expression");
@@ -56,17 +55,15 @@ sap.ui.define([
 				this.getView().getModel("inputModel").setProperty("/expression", result);
 			}
 		},
-		//in spalte einfügen
 		editInput: function (ch) {
 			var expression = this.getView().getModel("inputModel").getProperty("/expression");
 			if ("+/*-".indexOf(ch) == -1) {
-				expression += ch; // wenn "#-*/" nicht vorhanden ist, dann hinzufügen von zahlen
+				expression += ch;
 			} else {
-				expression += (" " + ch + " "); //else -> wenn vorhanden ist, dann operatoren hizufügen
+				expression += (" " + ch + " ");
 			}
 			this.getView().getModel("inputModel").setProperty("/expression", expression);
 		},
-		//ergebnis berechnen
 		validCompute: function () {
 			var expression = this.getView().getModel("inputModel").getProperty("/expression");
 			try {
