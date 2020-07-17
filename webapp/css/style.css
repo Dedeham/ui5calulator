@@ -1,19 +1,23 @@
 div.sapUiTableRowHdr::before, div.sapUiTableColRowHdrIco::before {
   border-radius: 20px;
   border: 0.125rem lightgrey solid;
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.7rem;
+  height: 1.7rem;
   font-size: 0.75rem;
   font-weight: bold;
 }
 
 .sapMBtnInner {
-  border: none;
+  border: 1px solid darkgrey;
   background: lightgrey;
+  box-shadow: 1px 1px 1px;
+  padding: 2px;
+  margin: 3px;
 }
 
 .sapMBtn:hover > .sapMBtnHoverable {
-  background: #66e3ff;
+  background: lightblue;
+  border: 1px solid black;
 }
 
 .sapMBtnActive {
@@ -81,11 +85,11 @@ div.sapMGT {
 }
 
 .sapMIBar {
-  background: #e6faff;
+  background: black;
 }
 
 div.sapMListBGSolid .sapMLIB:not(.sapMLIBActive):not(.sapMLIBSelected):not(:hover) {
-  background: #ccf6ff;
+  background: black;
 }
 
 li.sapMNLI:hover {
@@ -93,7 +97,8 @@ li.sapMNLI:hover {
 }
 
 .borderpanel{
-  border: 2px solid black
+  border: 4px solid black;
+  background: lightblue;
 }
 
 /*# sourceMappingURL=style.css.map */

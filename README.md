@@ -7,9 +7,9 @@ This Calculator is only for educational purposes
 
 Features: All the basic operations "+ - * / ^" and working with parenthesis.
 
-Mostly coded in SAPUI5
+Used SAPUI5 Kit for visuals
 
-And for the homies that maybe have to do that in an internship
+For the homies that maybe have to do that in an internship
 
 **Installation**
 ___

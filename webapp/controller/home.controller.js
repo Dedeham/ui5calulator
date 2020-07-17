@@ -108,7 +108,6 @@ var changeToPostfix = function (expression) {
 		"-": 1,
 		"/": 2,
 		"*": 2,
-		"sin(": 2,
 		"^": 3
 	}
 
@@ -161,7 +160,7 @@ var performOperation = function (a, b, operator) {
 		case "^":
 			return Math.pow(parseFloat(a), parseFloat(b));
 		default:
-			alert("Math Fehler");
+			sap.m.MessageToast.show("Math Fehler");
 			return null;
 	}
 }
