@@ -40,4 +40,5 @@ Overall:
 - Added the trig functions: sin, cos and tan
 - Added DEL button
 
-# Ight bois imma dip peace ouut!
+# Hope Mr. Karakus is pleased!
+
